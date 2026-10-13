@@ -1,0 +1,154 @@
+{
+  "model_id": "meta-llama/Meta-Llama-3-8B",
+  "official_claims": [
+    {
+      "value": 66.6,
+      "source": "Qwen3 Technical Report (arXiv:2505.09388), Table 6",
+      "agg": null
+    },
+    {
+      "value": 66.7,
+      "source": "Meta Llama 3.1 model card (HF meta-llama/Llama-3.1-8B), base models table",
+      "agg": "macro"
+    }
+  ],
+  "official_reported_accuracy": 0.6659999999999999,
+  "protocols": {
+    "letter_5shot": {
+      "correct": 9197,
+      "total": 14042,
+      "accuracy": 0.6549636803874092,
+      "ci95": [
+        0.6470593609496422,
+        0.6627832333168344
+      ],
+      "macro_accuracy": 0.6676056965566367,
+      "complete": true,
+      "vs_official": [
+        {
+          "source": "Qwen3 Technical Report (arXiv:2505.09388), Table 6",
+          "official": 66.6,
+          "agg_used": "micro",
+          "delta_pp": -1.103631961259083,
+          "official_in_micro_ci": false
+        },
+        {
+          "source": "Meta Llama 3.1 model card (HF meta-llama/Llama-3.1-8B), base models table",
+          "official": 66.7,
+          "agg_used": "macro",
+          "delta_pp": 0.06056965566367012,
+          "official_in_micro_ci": false
+        }
+      ],
+      "n_per_subject": 0
+    },
+    "letter_0shot": {
+      "correct": 755,
+      "total": 1140,
+      "accuracy": 0.6622807017543859,
+      "ci95": [
+        0.6343225923311709,
+        0.6891487694378012
+      ],
+      "macro_accuracy": 0.6622807017543859,
+      "complete": true,
+      "vs_official": [
+        {
+          "source": "Qwen3 Technical Report (arXiv:2505.09388), Table 6",
+          "official": 66.6,
+          "agg_used": "micro",
+          "delta_pp": -0.37192982456140555,
+          "official_in_micro_ci": true
+        },
+        {
+          "source": "Meta Llama 3.1 model card (HF meta-llama/Llama-3.1-8B), base models table",
+          "official": 66.7,
+          "agg_used": "macro",
+          "delta_pp": -0.4719298245614141,
+          "official_in_micro_ci": true
+        }
+      ],
+      "vs_letter_5shot": {
+        "only_ref_correct": 93,
+        "only_this_correct": 68,
+        "mcnemar_p": 0.0582246440347412
+      },
+      "n_per_subject": 20
+    },
+    "cloze_5shot": {
+      "correct": 552,
+      "total": 1140,
+      "accuracy": 0.4842105263157895,
+      "ci95": [
+        0.4553016449272188,
+        0.513225465819584
+      ],
+      "macro_accuracy": 0.4842105263157895,
+      "complete": true,
+      "vs_official": [
+        {
+          "source": "Qwen3 Technical Report (arXiv:2505.09388), Table 6",
+          "official": 66.6,
+          "agg_used": "micro",
+          "delta_pp": -18.17894736842105,
+          "official_in_micro_ci": false
+        },
+        {
+          "source": "Meta Llama 3.1 model card (HF meta-llama/Llama-3.1-8B), base models table",
+          "official": 66.7,
+          "agg_used": "macro",
+          "delta_pp": -18.278947368421058,
+          "official_in_micro_ci": false
+        }
+      ],
+      "vs_letter_5shot": {
+        "only_ref_correct": 359,
+        "only_this_correct": 131,
+        "mcnemar_p": 1.4305772737090442e-25
+      },
+      "n_per_subject": 20
+    },
+    "cloze_5shot_norm": {
+      "correct": 559,
+      "total": 1140,
+      "accuracy": 0.4903508771929825,
+      "ci95": [
+        0.4614123484039021,
+        0.5193542192746996
+      ],
+      "macro_accuracy": 0.4903508771929824,
+      "complete": true,
+      "vs_official": [
+        {
+          "source": "Qwen3 Technical Report (arXiv:2505.09388), Table 6",
+          "official": 66.6,
+          "agg_used": "micro",
+          "delta_pp": -17.564912280701748,
+          "official_in_micro_ci": false
+        },
+        {
+          "source": "Meta Llama 3.1 model card (HF meta-llama/Llama-3.1-8B), base models table",
+          "official": 66.7,
+          "agg_used": "macro",
+          "delta_pp": -17.664912280701763,
+          "official_in_micro_ci": false
+        }
+      ],
+      "vs_letter_5shot": {
+        "only_ref_correct": 343,
+        "only_this_correct": 122,
+        "mcnemar_p": 2.281361747406948e-25
+      },
+      "n_per_subject": 20
+    }
+  },
+  "n_per_subject": 20,
+  "seed": 0,
+  "total_items": 1140,
+  "limit": null,
+  "device": "mps",
+  "dtype": "torch.bfloat16",
+  "cache_fallbacks": 0,
+  "batch_size": 8,
+  "runtime_seconds_this_session": 1398.4719610214233
+}

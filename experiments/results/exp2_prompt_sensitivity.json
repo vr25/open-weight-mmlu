@@ -1,0 +1,171 @@
+{
+  "conditions": {
+    "llama3.1:8b|cot|greedy": {
+      "model": "llama3.1:8b",
+      "prompt_variant": "cot",
+      "decoding_variant": "greedy",
+      "correct": 380,
+      "total": 570,
+      "accuracy": 0.6666666666666666,
+      "ci95": [
+        0.6269644072645986,
+        0.7041374159563041
+      ],
+      "unparsed_rate": 0.02280701754385965,
+      "truncated_rate": 0.11578947368421053,
+      "complete": false
+    },
+    "llama3.1:8b|direct|greedy": {
+      "model": "llama3.1:8b",
+      "prompt_variant": "direct",
+      "decoding_variant": "greedy",
+      "correct": 405,
+      "total": 1140,
+      "accuracy": 0.35526315789473684,
+      "ci95": [
+        0.32800927735043284,
+        0.3834892378285919
+      ],
+      "unparsed_rate": 0.4368421052631579,
+      "truncated_rate": 0.3447368421052632,
+      "complete": true
+    },
+    "llama3.1:8b|direct_mt|greedy": {
+      "model": "llama3.1:8b",
+      "prompt_variant": "direct_mt",
+      "decoding_variant": "greedy",
+      "correct": 797,
+      "total": 1140,
+      "accuracy": 0.6991228070175438,
+      "ci95": [
+        0.6718662811983241,
+        0.7250418221614418
+      ],
+      "unparsed_rate": 0.0,
+      "truncated_rate": 0.0,
+      "complete": true
+    },
+    "qwen2.5:7b-instruct|cot|greedy": {
+      "model": "qwen2.5:7b-instruct",
+      "prompt_variant": "cot",
+      "decoding_variant": "greedy",
+      "correct": 404,
+      "total": 570,
+      "accuracy": 0.7087719298245614,
+      "ci95": [
+        0.670174836934367,
+        0.7445737626791848
+      ],
+      "unparsed_rate": 0.007017543859649123,
+      "truncated_rate": 0.02631578947368421,
+      "complete": false
+    },
+    "qwen2.5:7b-instruct|direct|greedy": {
+      "model": "qwen2.5:7b-instruct",
+      "prompt_variant": "direct",
+      "decoding_variant": "greedy",
+      "correct": 843,
+      "total": 1140,
+      "accuracy": 0.7394736842105263,
+      "ci95": [
+        0.7132200263922184,
+        0.7641187939479406
+      ],
+      "unparsed_rate": 0.0,
+      "truncated_rate": 0.0,
+      "complete": true
+    },
+    "qwen2.5:7b-instruct|direct_mt|greedy": {
+      "model": "qwen2.5:7b-instruct",
+      "prompt_variant": "direct_mt",
+      "decoding_variant": "greedy",
+      "correct": 847,
+      "total": 1140,
+      "accuracy": 0.7429824561403509,
+      "ci95": [
+        0.7168285831899194,
+        0.7675042125398389
+      ],
+      "unparsed_rate": 0.0008771929824561404,
+      "truncated_rate": 0.0008771929824561404,
+      "complete": true
+    },
+    "qwen3:8b|cot|greedy": {
+      "model": "qwen3:8b",
+      "prompt_variant": "cot",
+      "decoding_variant": "greedy",
+      "correct": 455,
+      "total": 570,
+      "accuracy": 0.7982456140350878,
+      "ci95": [
+        0.7633531399264403,
+        0.8291448595214911
+      ],
+      "unparsed_rate": 0.014035087719298246,
+      "truncated_rate": 0.015789473684210527,
+      "complete": false
+    },
+    "qwen3:8b|direct|greedy": {
+      "model": "qwen3:8b",
+      "prompt_variant": "direct",
+      "decoding_variant": "greedy",
+      "correct": 775,
+      "total": 1140,
+      "accuracy": 0.6798245614035088,
+      "ci95": [
+        0.6521764355446671,
+        0.706264803172302
+      ],
+      "unparsed_rate": 0.0412280701754386,
+      "truncated_rate": 0.014912280701754385,
+      "complete": true
+    },
+    "qwen3:8b|direct_mt|greedy": {
+      "model": "qwen3:8b",
+      "prompt_variant": "direct_mt",
+      "decoding_variant": "greedy",
+      "correct": 859,
+      "total": 1140,
+      "accuracy": 0.7535087719298246,
+      "ci95": [
+        0.7276671329772619,
+        0.7776475889212946
+      ],
+      "unparsed_rate": 0.008771929824561403,
+      "truncated_rate": 0.008771929824561403,
+      "complete": true
+    }
+  },
+  "paired_tests": {
+    "llama3.1:8b": {
+      "n_items": 570,
+      "acc_direct": 0.3508771929824561,
+      "acc_cot": 0.6666666666666666,
+      "only_direct_correct": 43,
+      "only_cot_correct": 223,
+      "mcnemar_p": 1.769865585441081e-30
+    },
+    "qwen3:8b": {
+      "n_items": 570,
+      "acc_direct": 0.6789473684210526,
+      "acc_cot": 0.7982456140350878,
+      "only_direct_correct": 36,
+      "only_cot_correct": 104,
+      "mcnemar_p": 7.600909757854836e-09
+    },
+    "qwen2.5:7b-instruct": {
+      "n_items": 570,
+      "acc_direct": 0.7333333333333333,
+      "acc_cot": 0.7087719298245614,
+      "only_direct_correct": 66,
+      "only_cot_correct": 52,
+      "mcnemar_p": 0.23126568219748736
+    }
+  },
+  "config": {
+    "n_per_subject": 20,
+    "seed": 0,
+    "n_items": 1140,
+    "limit": null
+  }
+}

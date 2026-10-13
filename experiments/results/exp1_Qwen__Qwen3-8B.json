@@ -1,0 +1,29 @@
+{
+  "model_id": "Qwen/Qwen3-8B",
+  "official_claims": [],
+  "official_reported_accuracy": null,
+  "protocols": {
+    "letter_5shot": {
+      "correct": 896,
+      "total": 1140,
+      "accuracy": 0.7859649122807018,
+      "ci95": [
+        0.7612157580386724,
+        0.8087932362136786
+      ],
+      "macro_accuracy": 0.7859649122807018,
+      "complete": true,
+      "vs_official": [],
+      "n_per_subject": 20
+    }
+  },
+  "n_per_subject": 20,
+  "seed": 0,
+  "total_items": 1140,
+  "limit": null,
+  "device": "mps",
+  "dtype": "torch.bfloat16",
+  "cache_fallbacks": 0,
+  "batch_size": 8,
+  "runtime_seconds_this_session": 679.8851590156555
+}

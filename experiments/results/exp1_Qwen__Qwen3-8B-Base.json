@@ -1,0 +1,121 @@
+{
+  "model_id": "Qwen/Qwen3-8B-Base",
+  "official_claims": [
+    {
+      "value": 76.89,
+      "source": "Qwen3 Technical Report (arXiv:2505.09388), Table 6",
+      "agg": null
+    }
+  ],
+  "official_reported_accuracy": 0.7689,
+  "protocols": {
+    "letter_5shot": {
+      "correct": 10793,
+      "total": 14042,
+      "accuracy": 0.7686227033186156,
+      "ci95": [
+        0.7615745703131723,
+        0.7755238973215476
+      ],
+      "macro_accuracy": 0.7878208635488131,
+      "complete": true,
+      "vs_official": [
+        {
+          "source": "Qwen3 Technical Report (arXiv:2505.09388), Table 6",
+          "official": 76.89,
+          "agg_used": "micro",
+          "delta_pp": -0.02772966813843425,
+          "official_in_micro_ci": true
+        }
+      ],
+      "n_per_subject": 0
+    },
+    "letter_0shot": {
+      "correct": 879,
+      "total": 1140,
+      "accuracy": 0.7710526315789473,
+      "ci95": [
+        0.7457761851711107,
+        0.7945084136754428
+      ],
+      "macro_accuracy": 0.7710526315789474,
+      "complete": true,
+      "vs_official": [
+        {
+          "source": "Qwen3 Technical Report (arXiv:2505.09388), Table 6",
+          "official": 76.89,
+          "agg_used": "micro",
+          "delta_pp": 0.21526315789472505,
+          "official_in_micro_ci": true
+        }
+      ],
+      "vs_letter_5shot": {
+        "only_ref_correct": 73,
+        "only_this_correct": 49,
+        "mcnemar_p": 0.03687746944973642
+      },
+      "n_per_subject": 20
+    },
+    "cloze_5shot": {
+      "correct": 644,
+      "total": 1140,
+      "accuracy": 0.5649122807017544,
+      "ci95": [
+        0.535962358841411,
+        0.5934261858661779
+      ],
+      "macro_accuracy": 0.5649122807017545,
+      "complete": true,
+      "vs_official": [
+        {
+          "source": "Qwen3 Technical Report (arXiv:2505.09388), Table 6",
+          "official": 76.89,
+          "agg_used": "micro",
+          "delta_pp": -20.398771929824562,
+          "official_in_micro_ci": false
+        }
+      ],
+      "vs_letter_5shot": {
+        "only_ref_correct": 340,
+        "only_this_correct": 81,
+        "mcnemar_p": 8.124488020874209e-39
+      },
+      "n_per_subject": 20
+    },
+    "cloze_5shot_norm": {
+      "correct": 669,
+      "total": 1140,
+      "accuracy": 0.5868421052631579,
+      "ci95": [
+        0.5580130408962476,
+        0.6150878499963377
+      ],
+      "macro_accuracy": 0.5868421052631579,
+      "complete": true,
+      "vs_official": [
+        {
+          "source": "Qwen3 Technical Report (arXiv:2505.09388), Table 6",
+          "official": 76.89,
+          "agg_used": "micro",
+          "delta_pp": -18.205789473684206,
+          "official_in_micro_ci": false
+        }
+      ],
+      "vs_letter_5shot": {
+        "only_ref_correct": 314,
+        "only_this_correct": 80,
+        "mcnemar_p": 7.282100906233153e-34
+      },
+      "n_per_subject": 20
+    }
+  },
+  "n_per_subject": 20,
+  "seed": 0,
+  "total_items": 1140,
+  "limit": null,
+  "device": "mps",
+  "dtype": "torch.bfloat16",
+  "cache_fallbacks": 0,
+  "batch_size": 8,
+  "runtime_seconds_this_session": 1236.5324289798737
+}

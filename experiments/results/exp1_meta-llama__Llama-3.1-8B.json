@@ -1,0 +1,121 @@
+{
+  "model_id": "meta-llama/Llama-3.1-8B",
+  "official_claims": [
+    {
+      "value": 66.7,
+      "source": "Meta Llama 3.1 model card (HF meta-llama/Llama-3.1-8B), base models table",
+      "agg": "macro"
+    }
+  ],
+  "official_reported_accuracy": 0.667,
+  "protocols": {
+    "letter_5shot": {
+      "correct": 9200,
+      "total": 14042,
+      "accuracy": 0.655177325167355,
+      "ci95": [
+        0.6472740996069057,
+        0.6629956673538722
+      ],
+      "macro_accuracy": 0.6664121200649296,
+      "complete": true,
+      "vs_official": [
+        {
+          "source": "Meta Llama 3.1 model card (HF meta-llama/Llama-3.1-8B), base models table",
+          "official": 66.7,
+          "agg_used": "macro",
+          "delta_pp": -0.058787993507053216,
+          "official_in_micro_ci": false
+        }
+      ],
+      "n_per_subject": 0
+    },
+    "letter_0shot": {
+      "correct": 766,
+      "total": 1140,
+      "accuracy": 0.6719298245614035,
+      "ci95": [
+        0.6441369022582525,
+        0.698567891832118
+      ],
+      "macro_accuracy": 0.6719298245614035,
+      "complete": true,
+      "vs_official": [
+        {
+          "source": "Meta Llama 3.1 model card (HF meta-llama/Llama-3.1-8B), base models table",
+          "official": 66.7,
+          "agg_used": "macro",
+          "delta_pp": 0.4929824561403393,
+          "official_in_micro_ci": true
+        }
+      ],
+      "vs_letter_5shot": {
+        "only_ref_correct": 96,
+        "only_this_correct": 67,
+        "mcnemar_p": 0.027988971911879115
+      },
+      "n_per_subject": 20
+    },
+    "cloze_5shot": {
+      "correct": 552,
+      "total": 1140,
+      "accuracy": 0.4842105263157895,
+      "ci95": [
+        0.4553016449272188,
+        0.513225465819584
+      ],
+      "macro_accuracy": 0.4842105263157895,
+      "complete": true,
+      "vs_official": [
+        {
+          "source": "Meta Llama 3.1 model card (HF meta-llama/Llama-3.1-8B), base models table",
+          "official": 66.7,
+          "agg_used": "macro",
+          "delta_pp": -18.278947368421058,
+          "official_in_micro_ci": false
+        }
+      ],
+      "vs_letter_5shot": {
+        "only_ref_correct": 363,
+        "only_this_correct": 120,
+        "mcnemar_p": 1.9848999470454174e-29
+      },
+      "n_per_subject": 20
+    },
+    "cloze_5shot_norm": {
+      "correct": 573,
+      "total": 1140,
+      "accuracy": 0.5026315789473684,
+      "ci95": [
+        0.4736468272345749,
+        0.5315986543076247
+      ],
+      "macro_accuracy": 0.5026315789473684,
+      "complete": true,
+      "vs_official": [
+        {
+          "source": "Meta Llama 3.1 model card (HF meta-llama/Llama-3.1-8B), base models table",
+          "official": 66.7,
+          "agg_used": "macro",
+          "delta_pp": -16.43684210526316,
+          "official_in_micro_ci": false
+        }
+      ],
+      "vs_letter_5shot": {
+        "only_ref_correct": 338,
+        "only_this_correct": 116,
+        "mcnemar_p": 3.153391461639705e-26
+      },
+      "n_per_subject": 20
+    }
+  },
+  "n_per_subject": 20,
+  "seed": 0,
+  "total_items": 1140,
+  "limit": null,
+  "device": "mps",
+  "dtype": "torch.bfloat16",
+  "cache_fallbacks": 0,
+  "batch_size": 8,
+  "runtime_seconds_this_session": 1439.2257359027863
+}
