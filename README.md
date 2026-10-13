@@ -107,6 +107,6 @@ if you want to commit actual run output alongside the code.
     ├── exp3_base_vs_chat.py
     ├── analysis/
     ├── run_all.sh
-    ├── results/           # generated
-    └── figures/           # generated
+    ├── results/           
+    └── figures/           
 ```
